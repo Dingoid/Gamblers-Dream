@@ -1,0 +1,215 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Noto Sans", sans-serif;
+	font-weight: bolder;
+	transition-duration: 200ms;
+}
+body {
+	background: #121212;
+	min-height: 100vh;
+	max-height: 100vh;
+	color: white;
+	display: flex;
+	flex-direction: column;
+}
+.hideGame {
+	opacity: 0;
+	z-index: -1;
+	background-color: #202020;
+	position: absolute;
+	font-size: 2rem;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	vertical-align: center;
+	line-height: 100vh;
+}
+header,
+main {
+	max-width: 100%;
+	margin: 0 auto;
+}
+header {
+	background-color: #202020;
+	width: 95vw;
+	height: 10vh;
+	display: flex;
+	justify-content: center;
+	border-radius: 15px;
+	vertical-align: center;
+	line-height: 10vh;
+	margin: 2vh auto;
+}
+main {
+	display: flex;
+	flex: 1;
+	gap: 1vw;
+	width: 95vw;
+	max-height: 95vh;
+	margin-bottom: 2vh;
+}
+button {
+	border: none;
+	margin: 0;
+	text-align: center;
+	cursor: pointer;
+}
+.leftUi {
+	background-color: #202020;
+	width: 15%;
+	min-height: 100%;
+	border-radius: 15px;
+	padding: 1vw;
+	display: flex;
+	flex-direction: column;
+	gap: 1vw;
+	font-size: 1.5rem;
+}
+.playerMoney {
+	background-color: #121212;
+	border-radius: 15px;
+	text-align: center;
+	height: 5%;
+}
+.betsArea {
+	background-color: #121212;
+	height: 10%;
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+}
+.inputBetArea {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-right: 2%;
+}
+input[type="number"] {
+	-webkit-appearance: textfield;
+	appearance: textfield;
+}
+.betAmount {
+	width: 60%;
+	background-color: transparent;
+	color: white;
+	border: 0;
+	margin-left: 5%;
+	font-size: 1rem;
+}
+.inputButtons {
+	width: 50px;
+	height: 50%;
+	margin: 0 2px;
+	border-radius: 20%;
+}
+.placeBet {
+	background-color: red;
+	border-radius: 15px;
+	text-align: center;
+	height: 5%;
+}
+.howToPlay {
+	background-color: #121212;
+	border-radius: 15px;
+	text-align: center;
+	height: 100%;
+	font-size: 1rem;
+}
+.howToPlayText {
+	padding-top: 10px;
+	font-size: 0.8rem;
+}
+
+.middleUi {
+	background-color: #202020;
+	width: 70%;
+	min-height: 100%;
+	border-radius: 15px;
+	position: relative;
+	padding: 14px;
+}
+
+.choHanResult {
+	text-align: center;
+	font-size: 3rem;
+	margin-top: 10vh;
+	margin-bottom: 1vh;
+}
+.choHanWinOrLose {
+	text-align: center;
+	font-size: 1.2rem;
+	margin-bottom: 5vh;
+	color: red;
+}
+.choHanCenter {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.choHanDice {
+	background-color: white;
+	color: black;
+	width: 200px;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.choHanTotal {
+	width: 2vw;
+	text-align: center;
+}
+.choHanChoice {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin-top: 10%;
+}
+.choHanChoiceButton {
+	background-color: #121212;
+	color: white;
+	border-radius: 15px;
+	text-align: center;
+	height: 50px;
+	width: 100px;
+}
+.choHanChoiceButton:hover {
+	color: white;
+	background-color: #161616;
+}
+
+.rightUi {
+	background-color: #202020;
+	width: 15%;
+	min-height: 100%;
+	border-radius: 15px;
+	padding: 1vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	gap: 1vw;
+}
+.gameButton {
+	background-color: #121212;
+	color: white;
+	border-radius: 15px;
+	text-align: center;
+	height: 5%;
+	font-size: 1.3rem;
+}
+.gameButton:hover {
+	color: white;
+	background-color: #161616;
+}
+
+@media only screen and (max-width: 1599px) {
+	.hideGame {
+		opacity: 1;
+		z-index: 1;
+	}
+}
