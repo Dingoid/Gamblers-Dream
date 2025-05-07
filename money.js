@@ -1,7 +1,9 @@
 let playerMoney = 1000;
-let betAmount = document.getElementById("betAmount").value;
+let betAmount;
 const placeBetButton = document.getElementById("placeBetButton");
 const placeBetInput = document.getElementById("betAmount");
+let currentBet;
+let hasBetBeenPlaced = false;
 
 document.getElementById("playerMoney").innerText = "$" + playerMoney;
 
@@ -11,6 +13,9 @@ function placeBet() {
 		playerMoney -= betAmount;
 		document.getElementById("playerMoney").innerText = "$" + playerMoney;
 		lockBet();
+		currentBet = betAmount;
+		hasBetBeenPlaced = true;
+		choHanButtonEnable();
 	} else {
 		betAmount = 0;
 		document.getElementById("betAmount").value = "";

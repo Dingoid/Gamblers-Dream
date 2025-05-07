@@ -4,7 +4,8 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
-		<link rel="stylesheet" href="style.css" />
+		<link id="mainStyleSheet" rel="stylesheet" href="mainStyle.css" />
+		<link id="choHanStyleSheet" rel="stylesheet" href="choHanStyle.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -12,8 +13,7 @@
 			rel="stylesheet"
 		/>
 	</head>
-	<body>
-		<!-- <div class="hideGame">Increase Screen Size</div> -->
+	<body onload="currentGame('choHan'), choHanButtonEnable()">
 		<header><h1>Gambler's Dream</h1></header>
 		<main class="mainElements">
 			<section class="leftUi">
@@ -55,14 +55,18 @@
 				</button>
 				<div class="howToPlay">
 					HOW TO PLAY:
-					<p class="howToPlayText"></p>
+					<p class="howToPlayText">
+						Place your bet on either "Cho" (even) or "Han" (odd), dice are then
+						rolled, determining a winner.<br /><br />
+						2x payout
+					</p>
 				</div>
 			</section>
 
 			<section class="middleUi">
 				<section class="choHan">
 					<h2 id="choHanResult" class="choHanResult">Cho Or Han</h2>
-					<h3 id="choHanWinOrLose" class="choHanWinOrLose">Winner</h3>
+					<h3 id="choHanWinOrLose" class="choHanWinOrLose"></h3>
 					<section class="choHanCenter">
 						<img
 							src="/Pngs/dieBlank.png"
@@ -70,9 +74,7 @@
 							id="dieLeft"
 							class="choHanDice"
 						/>
-						<!-- <div id="dieLeft" class="choHanDice">5</div> -->
 						<h3 id="dieResult" class="choHanTotal"></h3>
-						<!-- <div id="dieRight" class="choHanDice">4</div> -->
 						<img
 							src="/Pngs/dieBlank.png"
 							alt=""
@@ -100,14 +102,45 @@
 			</section>
 
 			<section class="rightUi">
-				<button class="gameButton">Cho Han</button>
-				<button class="gameButton">game</button>
-				<button class="gameButton">game</button>
-				<button class="gameButton">game</button>
-				<button class="gameButton">game</button>
+				<button
+					id="gameButtonChoHan"
+					class="gameButton"
+					onclick="selectGame(this.id)"
+				>
+					Cho Han
+				</button>
+				<button
+					id="gameButton2"
+					class="gameButton"
+					onclick="selectGame(this.id)"
+				>
+					game
+				</button>
+				<button
+					id="gameButton3"
+					class="gameButton"
+					onclick="selectGame(this.id)"
+				>
+					game
+				</button>
+				<button
+					id="gameButton4"
+					class="gameButton"
+					onclick="selectGame(this.id)"
+				>
+					game
+				</button>
+				<button
+					id="gameButton5"
+					class="gameButton"
+					onclick="selectGame(this.id)"
+				>
+					game
+				</button>
 			</section>
 		</main>
 	</body>
-	<script src="choHan.js"></script>
+	<script src="activeGame.js"></script>
 	<script src="money.js"></script>
+	<script src="choHan.js"></script>
 </html>

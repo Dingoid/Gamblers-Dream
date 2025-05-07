@@ -116,11 +116,12 @@ input[type="number"] {
 	background-color: #121212;
 	border-radius: 15px;
 	text-align: center;
-	height: 100%;
+	height: fit-content;
+	max-height: 100%;
 	font-size: 1rem;
 }
 .howToPlayText {
-	padding-top: 10px;
+	padding: 10px;
 	font-size: 0.8rem;
 }
 
@@ -131,56 +132,6 @@ input[type="number"] {
 	border-radius: 15px;
 	position: relative;
 	padding: 14px;
-}
-
-.choHanResult {
-	text-align: center;
-	font-size: 3rem;
-	margin-top: 10vh;
-	margin-bottom: 1vh;
-}
-.choHanWinOrLose {
-	text-align: center;
-	font-size: 1.2rem;
-	margin-bottom: 5vh;
-	color: red;
-}
-.choHanCenter {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-	align-items: center;
-}
-.choHanDice {
-	background-color: white;
-	color: black;
-	width: 200px;
-	height: 200px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.choHanTotal {
-	width: 2vw;
-	text-align: center;
-}
-.choHanChoice {
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	margin-top: 10%;
-}
-.choHanChoiceButton {
-	background-color: #121212;
-	color: white;
-	border-radius: 15px;
-	text-align: center;
-	height: 50px;
-	width: 100px;
-}
-.choHanChoiceButton:hover {
-	color: white;
-	background-color: #161616;
 }
 
 .rightUi {
@@ -204,7 +155,7 @@ input[type="number"] {
 }
 .gameButton:hover {
 	color: white;
-	background-color: #161616;
+	background-color: #444444;
 }
 
 @media only screen and (max-width: 1599px) {
